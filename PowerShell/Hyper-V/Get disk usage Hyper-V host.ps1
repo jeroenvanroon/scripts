@@ -1,0 +1,1 @@
+Invoke-Command -ComputerName "VM01" {Get-PSDrive}
