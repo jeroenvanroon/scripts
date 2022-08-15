@@ -1,12 +1,5 @@
-#Set credentials
-$LiveCred = Get-Credential
-$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $LiveCred -Authentication Basic -AllowRedirection
-
-#Import session
-Import-PSSession $Session
-
-#Change execution policy
-Set-ExecutionPolicy RemoteSigned
+Import-Module ExchangeOnlineManagement
+Connect-ExchangeOnline -UserPrincipalName user.name@tenant.com
 
 #Get all mailboxes
 Get-mailbox
