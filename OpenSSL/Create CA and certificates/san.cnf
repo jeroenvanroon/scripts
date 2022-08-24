@@ -1,0 +1,24 @@
+[req]
+default_bits = 2048
+distinguished_name = req_distinguished_name
+req_extensions = req_ext
+prompt = no
+
+[req_distinguished_name]
+C   = 
+ST  = 
+L   = 
+O   = 
+OU  = 
+CN  = 
+E   = 
+
+[req_ext]
+subjectAltName = @alt_names
+
+[alt_names]
+IP.1 = 
+IP.3 = 
+DNS.1 = 
+DNS.2 = 
+DNS.3 = 
