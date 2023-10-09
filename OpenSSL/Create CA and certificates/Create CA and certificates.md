@@ -2,7 +2,7 @@ Step 1 : Create the private key
 * openssl genrsa -des3 -out CAPrivate.key 2048
 
 Step 2: Generate the root certificate
-* openssl req -x509 -new -nodes -key CAPrivate.key -sha256 -days 365 -out CAPrivate.crt
+* openssl req -x509 -new -nodes -key CAPrivate.key -sha256 -days 365 -out CAPrivate.crt -config san_root.cnf
 
 Step 3 : Generate the private key and csr
 * openssl req -out sslcert.csr -newkey rsa:2048 -nodes -keyout private.key -config san.cnf
