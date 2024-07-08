@@ -14,4 +14,4 @@ Check if SAN is in CSR:
 * openssl req -noout -text -in sslcert.csr | grep -A 1 "Subject Alternative Name"
 
 Check if SAN is in certificate:
-* openssl x509 -text -noout -in X509Certificate.crt | grep -A 1 "Subject Alternative Name"
+* openssl x509 -text -noout -in certificate.crt | grep -A 1 "Subject Alternative Name"
