@@ -1,12 +1,12 @@
 # UseMailboxModule.ps1
 
 # Import the module from the current directory
-$modulePath = Join-Path -Path (Get-Location) -ChildPath "scripts\PowerShell\Azure AD\MailboxModule.psm1"
+$modulePath = Join-Path -Path (Get-Location) -ChildPath "MailboxModule.psm1"
 Import-Module -Name $modulePath
 
 # Prompt for user input
-$UserPrincipalName = Read-Host "Enter the User Principal Name"
-$UserName = Read-Host "Enter the User Name"
+$UserPrincipalName = Read-Host "Enter the User Principal Name of the O365 - Exchange administrator"
+$UserName = Read-Host "Enter the User Name of the mailbox user"
 $AccessRights = Read-Host "Enter the Access Rights (default is Reviewer)"
 
 # Connect to Exchange Online
